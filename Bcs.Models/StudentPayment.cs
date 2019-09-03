@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Bcs.Models
 {
@@ -6,6 +7,9 @@ namespace Bcs.Models
     {
         public int StudentPaymentId { get; set; }
         public int StudentId { get; set; }
+
+        [UniqueKey(groupId: "1", order: 0)]
+        [StringLength(30, MinimumLength = 1)]
         public string PaymentReferenceNo { get; set; }
         public int PaymentCategoryId { get; set; }
         public int BatchId { get; set; }

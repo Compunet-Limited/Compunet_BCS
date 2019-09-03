@@ -16,6 +16,7 @@ namespace Bcs.Models
         public ICollection<PaymentSetting> PaymentSettings { get; set; }
         public ICollection<StudentResult> StudentResult { get; set; }
         public ICollection<ExamTimeTable> ExamTimeTables { get; set; }
+        public ICollection<CourseRegistration> CourseRegistrations { get; set; }
 
     }
 }
