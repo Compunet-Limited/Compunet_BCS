@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Bcs.Models
 {
@@ -10,7 +8,9 @@ namespace Bcs.Models
         public int ProgrammeId { get; set; }
         public string CourseName { get; set; }
         public string CourseCode { get; set; }
-        public string Description { get; set; }
+        public string CourseDescription { get; set; }
         public Programme Programme { get; set; }
+        public ICollection<StudentResult> StudentResult { get; set; }
+        public ICollection<ExamTimeTable> ExamTimeTables { get; set; }
     }
 }

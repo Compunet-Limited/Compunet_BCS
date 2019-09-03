@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Bcs.Models
 {
-    public class Session
+    public class Batch
     {
-        public int SessionId { get; set; }
-        public string SessionName { get; set; }
-        public bool ActiveSession { get; set; }
-        public DateTime SessionStart { get; set; }
-        public DateTime SessionEnd { get; set; }
+        public int BatchId { get; set; }
+        public string BatchName { get; set; }
+        public string BatchDescription { get; set; }
         public ICollection<PaymentType> PaymentTypes { get; set; }
         public ICollection<StudentPayment> StudentPayments { get; set; }
         public ICollection<PaymentSetting> PaymentSettings { get; set; }
         public ICollection<StudentResult> StudentResult { get; set; }
         public ICollection<ExamTimeTable> ExamTimeTables { get; set; }
+
 
     }
 }
