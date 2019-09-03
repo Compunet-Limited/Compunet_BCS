@@ -6,7 +6,7 @@ namespace Bcs.Models
     public class StudentPayment
     {
         public int StudentPaymentId { get; set; }
-        public int StudentId { get; set; }
+        public int? StudentId { get; set; }
 
         [UniqueKey(groupId: "1", order: 0)]
         [StringLength(30, MinimumLength = 1)]

@@ -3,7 +3,7 @@
     public class StudentResult
     {
         public int StudentResultId { get; set; }
-        public int StudentId { get; set; }
+        public int? StudentId { get; set; }
         public int CourseId { get; set; }
         public int BatchId { get; set; }
         public int SessionId { get; set; }
