@@ -1,78 +1,198 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Bcs.Web</title>
+<html lang="en">
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
-    </environment>
-    <link rel="stylesheet" href="~/css/site.css" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>:: CompunetAcademy :: @ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/assets/vendor/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="~/assets/vendor/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/assets/vendor/charts-c3/plugin.css" />
+    <link rel="stylesheet" href="~/assets/vendor/jvectormap/jquery-jvectormap-2.0.3.css" />
+    <link rel="stylesheet" href="~/assets/css/main.css" type="text/css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bcs.Web</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+
+<body class="theme-indigo">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="~/assets/images/brand/clogo2.png" width="48" height="48" alt="ArrOw"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!--Header Section-->
+    <nav class="navbar custom-navbar navbar-expand-lg py-2">
+        <div class="container-fluid px-0">
+            <a href="javascript:void(0);" class="menu_toggle"><i class="fa fa-align-left"></i></a>
+            <a href="index.html" class="navbar-brand"><img src="assets/images/brand/clogo2.png" alt="CompunetAcademy" /> <strong>Compunet</strong> Academy</a>
+            <div id="navbar_main">
+                <ul class="navbar-nav mr-auto hidden-xs">
+                    <li class="nav-item page-header">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i></a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item"><a class="nav-link nav-link-icon" href="index.html#"><i class="fa fa-cogs"></i></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link-icon" href="index.html#" id="navbar_1_dropdown_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-xl py-0">
+                            <div class="py-3 px-3">
+                                <h5 class="heading h6 mb-0">Notifications <span class="badge badge-pill badge-primary text-uppercase float-right">3</span></h5>
+                            </div>
+                            <div class="list-group">
+                                <a href="index.html#" class="list-group-item list-group-item-action d-flex">
+                                    <div class="list-group-img"><span class="avatar bg-purple">JD</span></div>
+                                    <div class="list-group-content">
+                                        <div class="list-group-heading">Johnyy Depp <small>10:05 PM</small></div>
+                                        <p class="text-sm">Lorem ipsum dolor consectetur adipiscing eiusmod tempor</p>
+                                    </div>
+                                </a>
+                                <a href="index.html#" class="list-group-item list-group-item-action d-flex">
+                                    <div class="list-group-img"><span class="avatar bg-pink">TC</span></div>
+                                    <div class="list-group-content">
+                                        <div class="list-group-heading">Tom Cruise <small>10:05 PM</small></div>
+                                        <p class="text-sm">Lorem ipsum dolor sit amet consectetur eiusmod tempor</p>
+                                    </div>
+                                </a>
+                                <a href="index.html#" class="list-group-item list-group-item-action d-flex">
+                                    <div class="list-group-img"><span class="avatar bg-blue">WS</span></div>
+                                    <div class="list-group-content">
+                                        <div class="list-group-heading">Will Smith <small>10:05 PM</small></div>
+                                        <p class="text-sm">Lorem sit amet consectetur adipiscing eiusmod tempor</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="py-3 text-center">
+                                <a href="index.html#" class="link link-sm link--style-3">View all notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link-icon" href="index.html#" id="navbar_1_dropdown_3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 class="dropdown-header">User menu</h6>
+                            <a class="dropdown-item" href="index.html#"><i class="fa fa-user text-primary"></i>My Profile</a>
+                            <a class="dropdown-item" href="index.html#"><span class="float-right badge badge-success">$50K</span><i class="fa fa-briefcase text-primary"></i>My Balance</a>
+                            <a class="dropdown-item" href="index.html#"><span class="float-right badge badge-warning">4</span><i class="fa fa-envelope text-primary"></i>Inbox</a>
+                            <a class="dropdown-item" href="index.html#"><i class="fa fa-cog text-primary"></i>Settings</a>
+                            <div class="dropdown-divider" role="presentation"></div>
+                            <a class="dropdown-item" href="index.html#"><i class="fa fa-sign-out text-primary"></i>Sign out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main_content" id="main-content">
+
+        <div class="left_sidebar">
+            <nav class="sidebar">
+                <div class="user-info">
+                    <div class="image">
+                        <a href="index.html#"><img src="~/assets/images/user.png" alt="User"></a>
+                    </div>
+                    <div class="detail mt-3">
+                        <h5 class="mb-0">Mike Thomas</h5>
+                        <small>Admin</small>
+                    </div>
+                    <div class="social">
+                        <a href="javascript:void(0);" title="facebook"><i class="ti-twitter-alt"></i></a>
+                        <a href="javascript:void(0);" title="twitter"><i class="ti-linkedin"></i></a>
+                        <a href="javascript:void(0);" title="instagram"><i class="ti-facebook"></i></a>
+                    </div>
+                </div>
+                <ul id="main-menu" class="metismenu">
+                    <li class="g_heading">Admin</li>
+                    <li class="active"><a href="index.html"><i class="ti-home"></i><span>Dashboard</span></a></li>
+
+                    <li class="g_heading">Trainer</li>
+                    <li class="g_heading">Training Manager</li>
+                    <li class="g_heading">Student</li>
+                    <li class="g_heading"> Customer Service Officer</li>
+                    <li class="g_heading"> Marketing Manager </li>
+                </ul>
+            </nav>
+        </div>       
+
+        <div class="page">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="index.html#">Dashboard</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-align-justify"></i>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="index.html#">Inbox</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="index.html#">Calendar</a>
+                                <a class="dropdown-item" href="index.html#">TaskBoard</a>
+                                <a class="dropdown-item" href="index.html#">Chat App</a>
+                                <a class="dropdown-item" href="index.html#">Contacts</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="index.html#">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="index.html#">Timeline</a>
+                                <a class="dropdown-item" href="index.html#">Invoices</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="index.html#">Stater page</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="index.html#">Pricing</a>
+                                <a class="dropdown-item" href="index.html#">Search</a>
+                                <a class="dropdown-item" href="index.html#">Testimonials</a>
+                                <a class="dropdown-item" href="index.html#">Map</a>
+                                <a class="dropdown-item" href="index.html#">Icon</a>
+                                <a class="dropdown-item" href="index.html#">Carousel</a>
+                                <a class="dropdown-item" href="index.html#">Gallery</a>
+                                <a class="dropdown-item" href="index.html#">Lookup</a>
+                            </div>
                         </li>
                     </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <button type="button" class="btn btn-primary">Add</button>
+                        <a href="https://themeforest.net/user/wrraptheme/portfolio" title="Portfolio" class="btn btn-success ml-2">Portfolio</a>
+                    </form>
                 </div>
+            </nav>
+            <div class="container-fluid">
+                @RenderBody()
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - Bcs.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <!-- Core -->
+    <script src="~/assets/bundles/libscripts.bundle.js"></script>
+    <script src="~/assets/bundles/vendorscripts.bundle.js"></script>
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
-    </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/assets/bundles/c3.bundle.js"></script>
+    <script src="~/assets/bundles/jvectormap.bundle.js"></script>
+    <!-- JVectorMap Plugin Js -->
 
+    <script src="~/assets/js/theme.js"></script>
+    <script src="~/assets/js/pages/index.js"></script>
+    <script src="~/assets/js/pages/todo-js.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
+
 </html>

@@ -14,6 +14,10 @@ namespace Bcs.Web.Controllers
         {
             return View();
         }
+        public IActionResult ContactSample()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
